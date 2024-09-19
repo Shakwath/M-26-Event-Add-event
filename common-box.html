@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new Comment</title>
+</head>
+<body>
+    <h1>please ad your comment</h1>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus alias expedita fugit tenetur. Eum cumque adipisci repellat laudantium repudiandae reiciendis similique aperiam. Aut architecto harum placeat dignissimos nam ea assumenda.</p>
+
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="60" rows="6"></textarea>
+        <br>
+        <button id="btn-post">post</button>
+    </div>
+
+  <script>
+    //step -1 add event lisenner
+    document.getElementById('btn-post').addEventListener('click',function(){
+        //step -2: get the comment from area
+        const commentBox = document.getElementById('new-comment')
+        const newComment = commentBox.value;
+
+        //step -03:  set the comment inside the comment contain
+
+        //1. get the comment container
+        //2. create a new element ptag
+        //3. set the text comment as innertext of the p tag
+        //4. add the p tag using appenchild
+
+   
+        const commentContainer = document.getElementById('comment-container');
+        const p = document.createElement('p');
+        p.innerText = newComment;
+        commentContainer.appendChild(p);
+
+        //text area te kicu likle seta p te add hbe.
+
+        //step -4 je lika ta likbo seta clear hoi jabe
+        commentBox.value = '';
+        
+    })
+  </script>
+
+
+</body>
+</html>
